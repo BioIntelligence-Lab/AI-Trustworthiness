@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Trustworthiness | BioIntelligence Lab</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      margin: 0;
+      background: #fff;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: #f8f9fb;
+    }
+    h1 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 80px;
+      color: #111;
+    }
+    p.subtitle {
+      font-size: 1.3em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .btn-container {
+      margin-top: 25px;
+    }
+    .btn {
+      display: inline-block;
+      background: #0055cc;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #003f99; }
+    section {
+      width: 85%;
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 0;
+    }
+    img.diagram {
+      display: block;
+      max-width: 100%;
+      margin: 25px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .highlight {
+      background: #f1f5ff;
+      padding: 20px;
+      border-left: 4px solid #0055cc;
+      margin: 25px 0;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      background: #f1f3f6;
+      padding: 40px 0;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>AI Trustworthiness</h1>
+    <p class="subtitle">From auditing clinical AI systems to building fair and robust medical imaging models.</p>
+
+    <div class="btn-container">
+      <a href="https://pubs.rsna.org/doi/full/10.1148/radiol.241674" class="btn">Overview Paper (Radiology 2025)</a>
+      <a href="https://openaccess.thecvf.com/content/ICCV2025W/MICCAI/html/Uwaeze_Generative_Counterfactual_Augmentation_for_Bias_Mitigation_ICCVW_2025_paper.html" class="btn">Generative Counterfactuals (ICCVW 2025)</a>
+      <a href="https://arxiv.org/abs/2502.04386" class="btn">Fair Foundation Models (arXiv 2025)</a>
+      <a href="https://github.com/Wazhee/GCA" class="btn">GitHub (GCA)</a>
+    </div>
+  </header>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>
+      Artificial intelligence (AI) holds tremendous potential for transforming healthcare — from automated diagnostics to precision treatment planning.
+      However, as these models move from research settings to clinical environments, the question of <strong>trust</strong> becomes paramount. 
+      Can we trust AI to perform equitably across diverse populations, institutions, and imaging protocols? Can we quantify and mitigate bias without sacrificing clinical accuracy? 
+    </p>
+
+    <p>
+      The <strong>AI Trustworthiness</strong> vertical of the BioIntelligence Lab aims to answer these questions through a multi-pronged research program that combines empirical auditing, conceptual analysis, and algorithmic innovation. 
+      Our work spans the full pipeline of medical AI — <strong>auditing deployed systems</strong>, <strong>defining and quantifying bias</strong>, <strong>identifying hidden vulnerabilities</strong>, and <strong>building generative solutions for fairness</strong>. 
+      This research directly informs the safe, equitable, and accountable use of AI in medicine.
+    </p>
+
+    <img src="assets/placeholder_overview.png" alt="Conceptual overview of AI Trustworthiness research themes" class="diagram">
+  </section>
+
+  <section id="audits">
+    <h2>1. Audits: Evaluating AI in the Wild</h2>
+    <p>
+      We began by asking a fundamental question: <em>Do existing AI systems perform fairly once deployed?</em> 
+      To answer this, we conducted some of the first large-scale fairness audits of medical AI systems across multiple modalities — including CT, X-ray, and MRI — and even natural language processing models used in radiology reporting. 
+      These studies reveal that while models may achieve high overall accuracy, they often exhibit hidden performance gaps for specific demographic groups, such as age, sex, or insurance status.
+    </p>
+
+    <p>
+      By exposing these disparities and establishing benchmark audit protocols, our work laid the foundation for bias assessment in clinical AI and influenced ongoing regulatory discussions around ethical AI deployment.
+    </p>
+
+    <div class="highlight">
+      <ul>
+        <li><strong>Sociodemographic biases in a commercial AI model for intracranial hemorrhage detection.</strong> Emergency Radiology, 2024.</li>
+        <li><strong>Generalizability and bias in a deep learning pediatric bone age prediction model.</strong> Radiology, 2022.</li>
+        <li><strong>Evaluating the robustness of a deep learning bone age algorithm to clinical image variation.</strong> Radiology: AI, 2024.</li>
+        <li><strong>Evaluating the performance and bias of NLP tools in labeling chest radiograph reports.</strong> Radiology, 2024.</li>
+        <li><strong>Radiomics-based prediction of patient demographic characteristics on chest radiographs.</strong> AJR, 2024.</li>
+        <li><strong>Pitfalls and Best Practices in Evaluation of AI Algorithmic Biases in Radiology.</strong> Radiology, 2025.</li>
+        <li><strong>Best Practices for the Safe Use of Large Language Models and Generative AI in Radiology.</strong> Radiology, 2025.</li>
+      </ul>
+    </div>
+
+    <img src="assets/placeholder_audit.png" alt="Visualization of AI bias audits across patient subgroups" class="diagram">
+  </section>
+
+  <section id="understanding">
+    <h2>2. Understanding Bias: Definitions, Context, and Representation</h2>
+    <p>
+      Before we can mitigate bias, we must first <em>understand what it is</em>. 
+      In this sub-vertical, we formalize the definitions, measurement strategies, and conceptual underpinnings of bias in medical AI. 
+      Our work has demonstrated that many fairness failures arise not from overt discrimination but from <strong>representation leakage</strong> — where demographic traits become encoded in latent feature spaces without explicit labels.
+    </p>
+
+    <p>
+      We also highlight the limitations of current bias reporting practices, showing that coarse demographic labels and incomplete dataset documentation can mask true disparities.
+      By rethinking how we define, measure, and report bias, we aim to create a shared scientific foundation for equitable AI development.
+    </p>
+
+    <div class="highlight">
+      <ul>
+        <li><strong>Coarse Race and Ethnicity Labels Mask Granular Underdiagnosis Disparities in Deep Learning Models.</strong> Radiology, 2023.</li>
+        <li><strong>Medical Imaging Data Science Competitions Should Report Dataset Demographics and Evaluate for Bias.</strong> Nature Medicine, 2023.</li>
+        <li><strong>Demographic Predictability in 3D CT Foundation Embeddings.</strong> arXiv:2412.00110, 2024.</li>
+      </ul>
+    </div>
+
+    <img src="assets/placeholder_bias.png" alt="Conceptual schematic showing demographic encoding in embeddings" class="diagram">
+  </section>
+
+  <section id="security">
+    <h2>3. Security: Hidden Vulnerabilities in AI Systems</h2>
+    <p>
+      Fairness is not only an ethical concern — it is also a <strong>security risk</strong>. 
+      Our work has revealed that fairness vulnerabilities can be exploited through undetectable adversarial attacks that disproportionately target underrepresented groups. 
+      These findings expose a new category of risk: <em>adversarial bias attacks</em>, where imperceptible perturbations can systematically degrade model performance for specific populations while leaving global metrics unchanged.
+    </p>
+
+    <p>
+      By combining adversarial machine learning and fairness analysis, this research establishes a new frontier at the intersection of AI security and ethics.
+    </p>
+
+    <div class="highlight">
+      <ul>
+        <li><strong>Hidden in Plain Sight: Undetectable Adversarial Bias Attacks on Vulnerable Patient Populations.</strong> Medical Imaging with Deep Learning (MIDL), 2024.</li>
+      </ul>
+    </div>
+
+    <img src="assets/placeholder_security.png" alt="Conceptual illustration of adversarial bias attack" class="diagram">
+  </section>
+
+  <section id="solutions">
+    <h2>4. Solutions: Generative and Adversarial Bias Mitigation</h2>
+    <p>
+      Finally, our research turns toward <strong>solutions</strong> — methods that can make AI models more equitable and trustworthy without compromising diagnostic accuracy. 
+      We introduce <strong>Generative Counterfactual Augmentation (GCA)</strong>, a novel approach that generates realistic, demographically balanced training examples using generative modeling. 
+      Unlike adversarial debiasing, which suppresses demographic information and may harm model utility, counterfactual augmentation acts as a <em>regularizer</em> — improving representation balance while maintaining clinical fidelity.
+    </p>
+
+    <p>
+      Building on this, we also explore adversarial representation alignment in 3D CT foundation embeddings, offering a pathway toward fairness-aware foundation models that generalize across populations and institutions.
+    </p>
+
+    <div class="highlight">
+      <ul>
+        <li><strong>Generative Counterfactual Augmentation for Bias Mitigation.</strong> ICCV Workshops (CVAMD), 2025.</li>
+        <li><strong>Towards Resource-Efficient Bias Mitigation Using Generative Modeling.</strong> Preprint, 2025.</li>
+        <li><strong>Towards Fair Medical AI: Adversarial Debiasing of 3D CT Foundation Embeddings.</strong> arXiv:2502.04386, 2025.</li>
+      </ul>
+    </div>
+
+    <img src="assets/placeholder_counterfactual.png" alt="Conceptual diagram illustrating generative counterfactual augmentation" class="diagram">
+  </section>
+
+  <section id="impact">
+    <h2>Impact</h2>
+    <p>
+      The <strong>AI Trustworthiness</strong> program redefines fairness evaluation and mitigation in medical imaging — from real-world audits to representation-level solutions. 
+      Our work has established both theoretical and practical frameworks for the ethical deployment of AI systems in healthcare, influencing radiology practice guidelines and ongoing federal initiatives for safe AI in medicine.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 BioIntelligence Research Lab · UTHealth Houston</p>
+  </footer>
+</body>
+</html>
